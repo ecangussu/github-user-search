@@ -1,0 +1,18 @@
+.main-nav {
+  display: flex;
+  height: 70px;
+  color: #FFF;
+  align-items: center;
+  padding-left: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #1890FF;
+}
+
+.nav-logo-text {
+  color: #FFF;
+  &:hover {
+    text-decoration: none;
+    color: #FFF;
+  }
+}
