@@ -1,0 +1,76 @@
+.user-card-container {
+  margin-top: 55px;
+  margin-left: 90px;
+  margin-right: 100px;
+  margin-bottom: 75px;
+  background: #F5F5F5;
+  border-radius: 8px;
+  display: flex;
+}
+
+.user-card-div-image-button {
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-right: 45px;
+  padding-bottom: 100px;
+}
+
+.user-card-div-image {
+  margin-bottom: 20px;
+}
+
+.user-card-image {
+  width: 284px;
+  height: 280px;
+}
+
+.user-card-header {
+  display: flex;
+}
+
+.layout-header {
+  background-color: #FFF;
+  border: 1px solid #D9D9D9;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 25px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 165px;
+  height: 25px;
+}
+
+.user-card-information {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 20px;
+  margin-right: 125px;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 870px;
+  height: 250px;
+}
+
+.layout-information {
+  border: 1px solid #D9D9D9;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #737373;
+  align-items: center;
+  padding: 8px 10px 8px 35px;
+}
+
+.layout-information-title {
+  font-size: 20px;
+  line-height: 28px;
+  color: #1890FF;
+}
