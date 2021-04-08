@@ -3,12 +3,17 @@ import { makeRequest } from 'core/utils/request'
 import './styles.scss';
 import { GitHubUser } from 'core/types/GitHubUser';
 import UserCard from './components/UserCard';
+import ImageLoader from './components/Loaders/ImageLoader';
+import InfoLoader from './components/Loaders/InfoLoader';
 
 type UserName = {
   name: string;
 }
 
 const Search = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasUser, setHasUser] = useState(true);
+  
   const [userData, setUserData] = useState<GitHubUser>({
     public_repos: 0,
     followers: 0,
@@ -20,6 +25,7 @@ const Search = () => {
     avatar_url: '',
     html_url: 'github.com',
   });
+  
   const [userName, setUserName] = useState<UserName>({
     name: ''
   });
@@ -31,10 +37,15 @@ const Search = () => {
   }
 
   const handleOnClick = () => {
+    setIsLoading(true);
     makeRequest({url: userName.name, method: 'GET'})
       .then(response => setUserData(response.data))
       .then(() => {
         setUserName({name: ''});
+      })
+      .finally(() => {
+        setIsLoading(false);
+        setHasUser(false);
       });
 
   }  
@@ -60,8 +71,18 @@ const Search = () => {
           Encontrar
         </button>
       </div>
-      <div>
-        <UserCard gitHubUser={userData}/>
+      <div className="search-users">
+        {hasUser ? "" : (isLoading ? (
+            <div className="search-loaders">
+              <div>
+                <ImageLoader/>
+              </div>
+              <div className="search-loader-information">
+                <InfoLoader/>
+              </div>
+            </div> 
+          ) : <UserCard gitHubUser={userData}/>)
+        }
       </div>
     </div>
   );

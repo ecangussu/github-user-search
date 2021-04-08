@@ -1,5 +1,5 @@
 .search-container {
-  margin-top: 54px;
+  margin-top: 55px;
   margin-left: 90px;
   margin-right: 100px;
   background-color: #E6F7FF;
@@ -18,4 +18,21 @@
 
 .search-input {
   margin-bottom: 25px;
+}
+
+.search-users {
+  margin-left: 90px;
+  margin-right: 100px;
+  margin-top: 55px;
+  margin-bottom: 75px;
+}
+
+.search-loaders {
+  background: #F5F5F5;
+  border-radius: 8px;
+  display: flex;
+}
+
+.search-loader-information {
+  padding-top: 25px;
 }
